@@ -1,0 +1,15 @@
+.git
+.gitignore
+.editorconfig
+.pylintrc
+*.md
+!README.md
+zuul.yaml
+docker-compose.yaml
+coverage.xml
+tox.ini
+build/
+data/
+dist/
+venv/
+.venv/

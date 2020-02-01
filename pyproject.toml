@@ -1,0 +1,41 @@
+[tool.poetry]
+name = "fail2banAPI"
+version = "0.1.0"
+description = "Fail2banAPI provides API to manage fail2ban."
+authors = [
+    "Mathias WOLFF <mathias@celea.org>"
+]
+license = "GPL-3.0-or-later"
+readme = "README.md"
+
+repository = "https://github.com/mwolff44/fail2banAPI"
+homepage = "https://github.com/mwolff44/fail2banAPI"
+
+keywords = ["fail2ban", "API", "security"]
+
+packages = [
+    {include = "clikit", from = "src"},
+    # This trips up pip when installing in editable mode
+    # so until it's fixed in Poetry we have to comment
+    # {include = "tests", format = "sdist"}
+]
+
+[tool.poetry.dependencies]
+python = "^3.7"
+fastapi = "^0.45.0"
+uvicorn = "^0.11.1"
+click = "^7.0"
+
+[tool.poetry.dev-dependencies]
+pytest = "^4.6"
+pytest-cov = "^2.6"
+black = "^19.10b0"
+flake8 = "^3.7.9"
+flake8-colors = "^0.1.6"
+tox = "^3.5"
+pre-commit = "^1.12"
+mypy = "^0.761"
+
+[build-system]
+requires = ["poetry>=1.0.0"]
+build-backend = "poetry.masonry.api"
